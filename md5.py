@@ -5,7 +5,11 @@ import sys
 
 def cmd():
     line=str(input("enter the line to convert into string \n : "))
-    return (hashup(line))
+    if (len(line) >= 1):
+        return (hashup(line))
+    else:
+        print("hashing requires non empty input")
+        exit(1)
 
 def boxprint(_string):
     element = "-"
